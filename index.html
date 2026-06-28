@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>SBO Selection Test_T3W1 2026</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <header class="top-header">
+      <div>
+        <p class="eyebrow">Student Test Portal</p>
+        <h1 id="mainTestTitle">SBO Selection Test_T3W1 2026</h1>
+      </div>
+      <div id="connectionStatus" class="connection-pill">Not connected</div>
+    </header>
+
+    <main>
+      <!-- LOGIN -->
+      <section id="loginView" class="card view active-view" aria-labelledby="loginTitle">
+        <h2 id="loginTitle">Log in to access the test</h2>
+        <p class="muted">
+          Enter your details exactly as instructed. Your student icon email will be used to verify your identity.
+        </p>
+
+        <form id="loginForm" class="form-grid">
+          <label>
+            Name
+            <input id="studentName" name="studentName" type="text" autocomplete="name" required placeholder="e.g. Tan Kai Xin" />
+          </label>
+
+          <label>
+            Class
+            <input id="studentClass" name="studentClass" type="text" autocomplete="organization" required placeholder="e.g. 26J03" />
+          </label>
+
+          <label>
+            Student icon email
+            <input id="studentEmail" name="studentEmail" type="email" autocomplete="email" required placeholder="e.g. name@students.edu.sg" />
+          </label>
+
+          <button id="loginButton" class="primary-button" type="submit">Log in</button>
+        </form>
+
+        <div id="loginMessage" class="message" role="status" aria-live="polite"></div>
+      </section>
+
+      <!-- LANDING / INSTRUCTIONS -->
+      <section id="landingView" class="card view" aria-labelledby="landingTitle">
+        <div class="student-strip">
+          <div>
+            <p class="eyebrow">Verified student</p>
+            <h2 id="landingStudentName">Student name</h2>
+          </div>
+          <div class="student-meta">
+            <span id="landingStudentClass">Class</span>
+            <span id="landingStudentEmail">Email</span>
+          </div>
+        </div>
+
+        <h2 id="landingTitle">SBO Selection Test_T3W1 2026</h2>
+        <div id="landingInstructions" class="instructions-box"></div>
+
+        <div class="landing-summary">
+          <div>
+            <strong id="landingQuestionCount">0</strong>
+            <span>question images</span>
+          </div>
+          <div>
+            <strong id="landingDuration">45 min</strong>
+            <span>maximum test duration</span>
+          </div>
+          <div>
+            <strong>Paper</strong>
+            <span>answer format</span>
+          </div>
+        </div>
+
+        <div class="button-row">
+          <button id="beginButton" class="primary-button" type="button">Begin Test</button>
+          <button id="logoutButton" class="secondary-button" type="button">Back to Login</button>
+        </div>
+
+        <div id="landingMessage" class="message" role="status" aria-live="polite"></div>
+      </section>
+
+      <!-- TEST VIEWER -->
+      <section id="testView" class="test-view view" aria-labelledby="testTitle">
+        <div class="test-toolbar">
+          <div class="test-info">
+            <p id="testEyebrow" class="eyebrow">SBO Selection Test_T3W1 2026</p>
+            <h2 id="testTitle">Question Viewer</h2>
+            <p id="testStudentLine" class="muted small-text"></p>
+          </div>
+
+          <div class="timer-box" aria-label="Time elapsed">
+            <span>Time elapsed</span>
+            <strong id="elapsedTimer">00:00</strong>
+          </div>
+        </div>
+
+        <div class="progress-wrap" aria-label="Test progress">
+          <div class="progress-label-row">
+            <span id="questionCounter">Question 1 of 1</span>
+            <span id="questionLabel">Question 1</span>
+          </div>
+          <div class="progress-track">
+            <div id="progressBar" class="progress-bar"></div>
+          </div>
+        </div>
+
+        <div class="viewer-shell">
+          <div class="viewer-help">
+            <span>Mouse: drag to move, wheel to zoom.</span>
+            <span>Tablet: use two fingers to pinch-zoom and pan.</span>
+          </div>
+          <div id="imageViewport" class="image-viewport" aria-label="Question image viewer">
+            <img id="questionImage" alt="Question image" draggable="false" />
+            <div id="imageLoading" class="image-loading">Loading question image…</div>
+          </div>
+        </div>
+
+        <div class="control-panel">
+          <div class="zoom-controls" aria-label="Zoom controls">
+            <button id="zoomOutButton" class="secondary-button" type="button">− Zoom</button>
+            <button id="resetViewButton" class="secondary-button" type="button">Reset View</button>
+            <button id="zoomInButton" class="secondary-button" type="button">+ Zoom</button>
+          </div>
+
+          <div class="nav-controls" aria-label="Question navigation">
+            <button id="prevButton" class="secondary-button" type="button">Previous</button>
+            <button id="nextButton" class="primary-button" type="button">Next</button>
+            <button id="submitButton" class="danger-button hidden" type="button">Submit Test</button>
+          </div>
+        </div>
+
+        <div id="testMessage" class="message" role="status" aria-live="polite"></div>
+      </section>
+
+      <!-- FINISHED -->
+      <section id="finishedView" class="card view" aria-labelledby="finishedTitle">
+        <h2 id="finishedTitle">Test session submitted</h2>
+        <p id="finishedMessage" class="large-message"></p>
+        <p class="muted">Please stop writing and wait for your teacher’s instructions.</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
