@@ -10,7 +10,7 @@
 
 const APP_CONFIG = {
   TEST_TITLE: "SBO Selection Test_T3W1 2026",
-  GAS_WEB_APP_URL: "https://script.google.com/macros/s/AKfycbxc-VTk7qYofVJ9LqGB9MTy8UsGq4lL8ujlH0nr1cFcvM5DQMZfvk3gAWfCTnyHhTIzuw/exec",
+  GAS_WEB_APP_URL: "https://script.google.com/a/macros/moe.edu.sg/s/AKfycbxc-VTk7qYofVJ9LqGB9MTy8UsGq4lL8ujlH0nr1cFcvM5DQMZfvk3gAWfCTnyHhTIzuw/exec",
   QUESTION_IMAGE_BASE_PATH: "assets/questions/",
   LOCAL_DEMO_MODE: false,
   API_TIMEOUT_MS: 18000,
