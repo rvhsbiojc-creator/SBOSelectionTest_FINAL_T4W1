@@ -19,14 +19,16 @@ const APP_CONFIG = {
 const DEFAULT_INSTRUCTIONS = `
 <ol>
   <li>You will see each question as an image, one page at a time.</li>
-  <li>Write all your answers clearly on the paper provided by your teacher.</li>
+  <li>Shade your answers clearly on the OAS provided by your teacher.</li>
   <li>No answers need to be typed into this website.</li>
   <li>Use the <strong>Next</strong> and <strong>Previous</strong> buttons to move between questions.</li>
   <li>You may zoom into the question image. On a laptop, use the zoom buttons, mouse wheel, and drag the image to move around. On a tablet, use two fingers to pinch-zoom and pan.</li>
   <li>The timer shows only the time elapsed since you began the test.</li>
+  <li><strong>For Questions 21 onwards, each statement is to be answered as True or False. If the statement is True, shade A on the OAS. If the statement is False, shade B on the OAS.</strong></li>
   <li>When you are done, go to the final question and press <strong>Submit Test</strong>.</li>
-  <li>The test will automatically submit once 45 minutes has elapsed.</li>
-</ol>`;
+  <li>The test will automatically submit once 90 minutes has elapsed.</li>
+</ol>
+`;
 
 const state = {
   verifiedStudent: null,
