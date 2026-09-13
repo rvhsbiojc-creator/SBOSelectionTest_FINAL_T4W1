@@ -13,7 +13,7 @@ const APP_CONFIG = {
   GAS_WEB_APP_URL: "https://script.google.com/a/macros/moe.edu.sg/s/AKfycbxc-VTk7qYofVJ9LqGB9MTy8UsGq4lL8ujlH0nr1cFcvM5DQMZfvk3gAWfCTnyHhTIzuw/exec",
   QUESTION_IMAGE_BASE_PATH: "assets/questions/",
   LOCAL_DEMO_MODE: false,
-  API_TIMEOUT_MS: 18000,
+  API_TIMEOUT_MS: 60000,
 };
 
 const DEFAULT_INSTRUCTIONS = `
